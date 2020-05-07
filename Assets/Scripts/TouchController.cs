@@ -10,12 +10,12 @@ public class TouchController : MonoBehaviour
 		Ray ray = new Ray();
 
 #if UNITY_EDITOR
-		if (Input.GetMouseButtonDown(0)/* && !EventSystem.current.IsPointerOverGameObject()*/)//2nd part - check if UI hitted
+		if (Input.GetMouseButtonDown(0) && !EventSystem.current.IsPointerOverGameObject())//2nd part - check if UI hitted
 			ray = Camera.main.ScreenPointToRay(Input.mousePosition);
 		else
 			return;
 #else//other devices
-		if (Input.touchCount > 0 && Input.GetTouch(0).phase == TouchPhase.Began/* && !EventSystem.current.IsPointerOverGameObject(Input.GetTouch(0).fingerId)*/)
+		if (Input.touchCount > 0 && Input.GetTouch(0).phase == TouchPhase.Began && !EventSystem.current.IsPointerOverGameObject(Input.GetTouch(0).fingerId))
 			ray = Camera.main.ScreenPointToRay(Input.GetTouch(0).position);
 		else
 			return;

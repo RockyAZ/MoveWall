@@ -49,4 +49,5 @@ public class SingleCubeController : MonoBehaviour
 		this.transform.position = tmpV;
 		yield break;
 	}
+
 }
