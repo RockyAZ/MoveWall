@@ -18,14 +18,14 @@ public class LevelController : MonoBehaviour
 	3 = right
 	4 = down
 	5 = left
-	6 = just above
+	6 = just above(kak prosyat v testovom)
 	Clockwise positions!
 	*/
 
 	private static LevelController instance;
 	public static LevelController Instance { get => instance; }
 
-	public const int H = 14;
+	public const int H = 25;
 	public const int W = 5;
 	private int[,] lvlStartData = new int[H, W] {
 											 { 1, 1, 1, 1, 1 },//this is end
@@ -37,6 +37,17 @@ public class LevelController : MonoBehaviour
 											 { 1, 6, 6, 6, 6 },
 											 { 1, 1, 1, 1, 1 },
 											 { 6, 1, 6, 1, 6 },
+											 { 1, 1, 1, 1, 1 },
+											 { 6, 1, 1, 1, 6 },
+											 { 1, 1, 6, 1, 1 },
+											 { 1, 1, 6, 1, 1 },
+											 { 6, 1, 1, 1, 6 },
+											 { 1, 6, 6, 6, 1 },
+											 { 1, 1, 1, 1, 1 },
+											 { 1, 1, 1, 1, 1 },
+											 { 1, 1, 1, 1, 1 },
+											 { 1, 1, 1, 1, 1 },
+											 { 1, 1, 1, 1, 1 },
 											 { 1, 1, 1, 1, 1 },
 											 { 1, 1, 1, 1, 1 },
 											 { 1, 1, 1, 1, 1 },

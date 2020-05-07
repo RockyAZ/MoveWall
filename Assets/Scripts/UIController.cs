@@ -7,29 +7,29 @@ using UnityEngine.UI;
 public class UIController : MonoBehaviour
 {
 	[SerializeField]
-	private Button startBtn;
+	private GameObject startUI;
 	[SerializeField]
-	private Button loseBtn;
+	private GameObject loseUI;
 	[SerializeField]
-	private Button winBtn;
+	private GameObject winUI;
 
 
 	private void Validator()
 	{
-		if (startBtn == null)
-			Debug.LogError("startBtn == null in UIController");
-		if (loseBtn	 == null)
-			Debug.LogError("loseBtn == null in UIController");
-		if (winBtn	 == null)
-			Debug.LogError("winBtn == null in UIController");
+		if (startUI == null)
+			Debug.LogError("startUI == null in UIController");
+		if (loseUI	 == null)
+			Debug.LogError("loseUI == null in UIController");
+		if (winUI	 == null)
+			Debug.LogError("winUI == null in UIController");
 	}
 
 	void Awake()
 	{
 		Validator();
-		startBtn.gameObject.SetActive(true);
-		loseBtn.gameObject.SetActive(false);
-		winBtn.gameObject.SetActive(false);
+		startUI.gameObject.SetActive(true);
+		loseUI.gameObject.SetActive(false);
+		winUI.gameObject.SetActive(false);
 	}
 
 	/// <summary>
@@ -37,9 +37,9 @@ public class UIController : MonoBehaviour
 	/// </summary>
 	public void StartGameHandle()
 	{
-		startBtn.gameObject.SetActive(false);
-		loseBtn.gameObject.SetActive(false);
-		winBtn.gameObject.SetActive(false);
+		startUI.gameObject.SetActive(false);
+		loseUI.gameObject.SetActive(false);
+		winUI.gameObject.SetActive(false);
 	}
 
 	/// <summary>
@@ -47,17 +47,17 @@ public class UIController : MonoBehaviour
 	/// </summary>
 	public void WinShow()
 	{
-		startBtn.gameObject.SetActive(false);
-		loseBtn.gameObject.SetActive(false);
-		winBtn.gameObject.SetActive(true);
+		startUI.gameObject.SetActive(false);
+		loseUI.gameObject.SetActive(false);
+		winUI.gameObject.SetActive(true);
 	}
 	/// <summary>
 	/// Handle ui when game lose
 	/// </summary>
 	public void LoseShow()
 	{
-		startBtn.gameObject.SetActive(false);
-		loseBtn.gameObject.SetActive(true);
-		winBtn.gameObject.SetActive(false);
+		startUI.gameObject.SetActive(false);
+		loseUI.gameObject.SetActive(true);
+		winUI.gameObject.SetActive(false);
 	}
 }

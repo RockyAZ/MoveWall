@@ -25,6 +25,5 @@ public class TouchController : MonoBehaviour
 		int layer = 1 << LayerMask.NameToLayer("MovableCube");
 		if (Physics.Raycast(ray, out hit, Mathf.Infinity, layer))
 			hit.transform.GetComponent<SingleCubeController>().Move();
-		print("there");
 	}
 }

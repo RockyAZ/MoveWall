@@ -6,6 +6,7 @@ public class SingleCubeController : MonoBehaviour
 {
 	private Vector3 targetPos;
 	private float speed;
+	private bool moving;//to avoid bugs
 
 	/// <summary>
 	/// Where cube should move if clicked
@@ -30,8 +31,11 @@ public class SingleCubeController : MonoBehaviour
 	/// </summary>
 	public void Move()
 	{
-		this.gameObject.layer = 0;
-		StartCoroutine(MoveCor());
+		if (!moving)
+		{
+			moving = true;
+			StartCoroutine(MoveCor());
+		}
 	}
 
 	IEnumerator MoveCor()
@@ -44,9 +48,24 @@ public class SingleCubeController : MonoBehaviour
 				break;
 			yield return 0;
 		}
+		StartCoroutine(MoveDown());
+		yield break;
+	}
+
+	IEnumerator MoveDown()
+	{
 		Vector3 tmpV = transform.position;
 		tmpV.y = 0;
-		this.transform.position = tmpV;
+		targetPos = tmpV;
+		while (transform.position != targetPos)
+		{
+			Vector3 checker = this.transform.position;
+			this.transform.position = Vector3.MoveTowards(this.transform.position, this.targetPos, speed * Time.deltaTime);
+			if (checker == this.transform.position)
+				break; yield return 0;
+		}
+		//delete opportunity to get collision with wall
+		this.gameObject.layer = 0;
 		yield break;
 	}
 
