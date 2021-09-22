@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "622167592320",
+    "project_id": "titanwalltestovoe",
+    "storage_bucket": "titanwalltestovoe.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:622167592320:android:02e0b24eb167d54c8f4565",
+        "android_client_info": {
+          "package_name": "com.DefaultCompany.TitanWallTestovoe"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "622167592320-0t0kg1kv0f14r9gkmvh3k0askg4su4e3.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBxavoKKfkNYz9OY0IpEhFYfBiqk7a8-6A"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "622167592320-0t0kg1kv0f14r9gkmvh3k0askg4su4e3.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -1,0 +1,10 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources xmlns:tools="http://schemas.android.com/tools" tools:keep="@string/gcm_defaultSenderId,@string/google_storage_bucket,@string/project_id,@string/google_api_key,@string/google_crash_reporting_api_key,@string/google_app_id,@string/default_web_client_id">
+  <string name="gcm_defaultSenderId" translatable="false">622167592320</string>
+  <string name="google_storage_bucket" translatable="false">titanwalltestovoe.appspot.com</string>
+  <string name="project_id" translatable="false">titanwalltestovoe</string>
+  <string name="google_api_key" translatable="false">AIzaSyBxavoKKfkNYz9OY0IpEhFYfBiqk7a8-6A</string>
+  <string name="google_crash_reporting_api_key" translatable="false">AIzaSyBxavoKKfkNYz9OY0IpEhFYfBiqk7a8-6A</string>
+  <string name="google_app_id" translatable="false">1:622167592320:android:02e0b24eb167d54c8f4565</string>
+  <string name="default_web_client_id" translatable="false">622167592320-0t0kg1kv0f14r9gkmvh3k0askg4su4e3.apps.googleusercontent.com</string>
+</resources>

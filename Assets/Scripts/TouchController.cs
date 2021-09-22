@@ -8,7 +8,8 @@ public class TouchController : MonoBehaviour
 	void Update()
 	{
 		Ray ray = new Ray();
-
+		if (Input.GetMouseButtonDown(0))
+			MyFirebase.Instance.ClickEvent();
 #if UNITY_EDITOR
 		if (Input.GetMouseButtonDown(0) && !EventSystem.current.IsPointerOverGameObject())//2nd part - check if UI hitted
 			ray = Camera.main.ScreenPointToRay(Input.mousePosition);
